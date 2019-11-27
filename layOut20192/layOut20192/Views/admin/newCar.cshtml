@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "newCar";
+}
+
+<h2>newCar</h2>
+
+<form method="post" action="/admin/addCar">
+    <input type="text" name="num" class="form-control" placeholder="Number" />
+    <input type="number" name="price" class="form-control" placeholder="price" />
+    <input type="text" name="type_car" class="form-control" placeholder="type" />
+    <input type="number" name="num_seats" class="form-control" placeholder="Number seats" />
+    <input type="text" name="col" class="form-control" placeholder="color" />
+    <input type="text" name="pick" class="form-control" placeholder="image" />
+    <input type="checkbox" name="available" value="true"> available<br>
+    <input type="checkbox" name="air_conditioning" value="true"> air_conditioning<br>
+    <input type="submit" value="ADD" />
+</form>

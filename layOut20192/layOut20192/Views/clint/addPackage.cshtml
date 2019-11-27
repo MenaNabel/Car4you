@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "Add Package";
+    Layout = "~/Views/Shared/_LayoutRegister.cshtml";
+}
+
+    <div class="back">
+
+        <!--<div class="menu">
+        <p>fef</p>
+        <hr>
+        <p>fvgfrgre</p>
+        <hr>
+    </div>-->
+
+        <section id="home" class="intro route bg-image" class="firstCamp">
+
+            <div class="intro">
+                <h1 class="intro-title mb-4">Welcome For You In Sno7y</h1>
+                <h1 class="typewrite" data-period="2000" data-type='[ "Renting Cars", "Wedding", "Travel", "Latest Models" ]'
+                <span class="wrap"></span>
+
+            </h1>
+            </div>
+
+        </section>
+
+
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <form method="get" action="/clint/reallyAddPackage">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="name" class=" text-center" placeholder="Name Of Package" required />
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="number" name="price" class=" text-center" placeholder="Price" required />
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="type_car" class=" text-center" placeholder="type" required />
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="number" name="num_seats" class=" text-center" placeholder="Number seats" required />
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="col" class=" text-center" placeholder="color" required />
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="file" name="pick" class=" text-center" placeholder="image" required />
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <textarea placeholder="discripeion the package" ></textarea>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="checkbox" name="available" value="true" required> available
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="checkbox" name="air_conditioning" value="true"> air_conditioning
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input class="submit  text-center" type="submit" value="Add Package" />
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3"></div>
+
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+
+
+
+    </div>
+

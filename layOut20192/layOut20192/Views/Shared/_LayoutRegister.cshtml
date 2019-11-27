@@ -1,0 +1,523 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/Content/logojpg.jpg" type="image/png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        nav {
+            opacity: 0.7;
+        }
+
+
+
+        body {
+            background-size: cover;
+            color: white;
+        }
+
+        .back {
+            background: rgba(0,0,0,0.45);
+            background-size: cover;
+            height: 100%;
+        }
+
+        nav {
+            background: black;
+            color: white;
+        }
+
+            nav:hover {
+                color: black;
+            }
+
+
+
+        .up {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            background: black;
+            color: white;
+            padding: 20px;
+            font-size: 25px;
+            border-radius: 50%;
+            display: none;
+            z-index: 100;
+            cursor: pointer;
+        }
+
+        .menu hr {
+            background: gray;
+        }
+
+        footer {
+            background: black;
+            opacity: 0.7;
+            padding-top: 40px;
+            padding-bottom: 50px;
+            margin-top: 0px;
+            margin-bottom: -20px;
+        }
+
+            footer div {
+                opacity: 0.4;
+                transition: all 0.3s ease-in-out;
+            }
+
+            footer:hover div {
+                opacity: 1;
+            }
+
+            footer div ul li {
+                list-style: none;
+                display: inline-block;
+                margin-top: 20px;
+                margin-left: 10px;
+            }
+
+                footer div ul li a {
+                    color: white;
+                }
+
+                    footer div ul li a:hover {
+                        color: white;
+                    }
+
+        section .intro {
+            margin: auto;
+            margin-top: 6px;
+        }
+
+            section .intro h1 {
+                padding-top: 200px;
+                text-align: center;
+                color: white;
+            }
+
+        .intro .typewrite {
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+
+
+
+        article {
+            margin-top: -70px;
+            margin-bottom: 0px;
+            margin-top: 6px;
+            padding-bottom: 50px;
+        }
+
+
+
+        form {
+            margin-top: 80px;
+            margin: auto;
+            text-align: center;
+        }
+
+            form div {
+                margin-top: 20px;
+            }
+
+            form input {
+                margin-top: 10px;
+                background: none;
+                color: white;
+                border: none;
+                border-bottom: 1px solid gray;
+                border-radius: 50px;
+                padding: 10px;
+                font-size: 18px;
+                margin: auto;
+                text-align: center;
+                width: 100%;
+            }
+
+            form .submit {
+                background: linear-gradient(to right,#FF6600 0,#000000 100%);
+                border: none;
+            }
+
+                form .submit:hover {
+                    background: linear-gradient(to right,#000000 0,#FF6600 100%);
+                }
+
+        .submitA {
+            background: linear-gradient(to right,#FF6600 0,#000000 100%);
+            color: white;
+            width: 150px;
+        }
+
+            .submitA:hover {
+                background: linear-gradient(to right,#000000 0,#FF6600 100%);
+                text-decoration: none;
+                color: white;
+            }
+
+        .choose1 {
+            transition: all 0.5s ease-in-out;
+            opacity: 0.5;
+        }
+
+            .choose1:hover {
+                opacity: 1;
+            }
+
+        .choose2 {
+            font-size: 20px;
+            color: white;
+        }
+
+            .choose2:hover {
+                text-decoration: none;
+                color: white;
+            }
+
+        .choose3 {
+            margin-bottom: 115px;
+        }
+
+        .divBook {
+            margin-top: 6px;
+            margin-bottom: 50px;
+            padding: 20px;
+        }
+
+        .private {
+            padding-top: 107px;
+        }
+
+        .table {
+            color: white;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .formTo {
+            padding-top: 50px;
+        }
+        .really{
+            transform:rotate(720deg);
+            transition: all 0.3s ease-in-out;
+            padding:150px;
+        }
+        .really .far {
+            font-size: 50px;
+            transform:rotate(720deg);
+        }
+        .really h1 {
+            transform:rotate(720deg);
+            font-size:50px;
+                transition: all 0.3s ease-in-out;
+        }
+        .really h3 .fas {
+            color:white;
+            margin-left:25px;
+            transition: all 0.3s ease-in-out;
+        }
+            .really h3 .fas:hover {
+                color: white;
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+                transform: scale(1.2,1.2);
+            }
+            .reallyAdd {
+                margin-top:6px;
+            }
+
+            .carBack{
+        position:fixed;
+        opacity:0.5;
+        z-index:-1;
+    }
+    .logo1 {
+        left:-100px;
+        top:200px;
+        font-size:200px;
+    }
+    .logo2 {
+        left:-400px;
+        top:400px;
+        font-size:400px;
+    }
+    .logo3 {
+        left:-800px;
+        top:60px;
+        font-size:250px;
+    }
+    .logo4 {
+        left:-1400px;
+        top:500px;
+        font-size:100px;
+    }
+
+    textarea  {
+                margin-top: 10px;
+                background: none;
+                color: white;
+                border: none;
+                border-bottom: 1px solid gray;
+                border-radius: 50px;
+                padding: 10px;
+                font-size: 18px;
+                margin: auto;
+                text-align: center;
+                width: 100%;
+            }
+
+    .boxServices {
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-top:90px;
+    
+    padding: 20px;
+    transition: all  0.5s ease-in-out;
+ }
+    .boxServices:hover {
+        box-shadow: 0px 5px 5px black;
+    }
+      .boxServices  .divIcon {
+    text-align: center;
+    margin: auto;
+    padding: 25px;
+    border: 10px solid #FF6600;
+    border-radius: 65px;
+    width: 120px;
+    height: 120px;
+    background: white;
+ }
+   .boxServices .divIcon i {
+    font-size: 50px;
+    color: black;
+ }
+
+   .boxServices .divIcon .i1 {
+       font-size:30px;
+       
+   }
+   .boxServices .divIcon .i2 {
+       font-size:30px;
+      
+   }
+   .boxServices:hover .divIcon  {
+    background: #FF6600;
+    border: 10px solid #cde1f8;
+    transition: all  0.5s ease-in-out;
+ }
+
+   .boxServices:hover i{
+    color: white;
+    transition: all  0.5s ease-in-out;
+ }
+   .boxServices .web {
+       margin:30px;
+   }
+   .linkIcon:hover{
+       text-decoration:none;
+   }
+
+   .boxServices .divIcon {
+    
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+.boxServices .divIcon:hover i {
+ 
+ -webkit-transform: rotate(360deg);
+ -moz-transform: rotate(360deg);
+ -o-transform: rotate(360deg);
+ transform: rotate(360deg);
+}
+    </style>
+</head>
+<body style="background: url(/Content/car-travelling-by-sunny-road_1088-51.jpg) no-repeat  fixed; background-size: cover;">
+
+
+    <div class="back">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light ">
+            <a class="navbar-brand" href="#" style="color:white">
+                <img src="bootstrap-stack.png" width="30" height="30" class="d-inline-block align-top" alt="" title="bootstrap">
+                Learn To Earn
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav">
+                   
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <a class="nav-link" href="/clint/logIn" style="color:gray">LOG OUT <i class="fas fa-sign-out-alt"></i></a>
+                </ul>
+
+            </div>
+
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- دى لما الشاشه تصغر بتحظ كل البيانات والاختيارات جوه ال 3 شرط اللى هيظهروو لما الشاشه هتصغر--> <!--data-target="#navbarNavAltMarkup" دى هتلاقيها مستدعيه ف الديف الكبير باسم ال id عشان لما تصغير وتدوس عليه يلاقيى الحاجات اللى ف الديف -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </nav>
+        <!--<div class="menu">
+        <p>fef</p>
+        <hr>
+        <p>fvgfrgre</p>
+        <hr>
+    </div>-->
+
+        
+        <div>
+            @RenderBody()
+        </div>
+
+        <i class="fas fa-car-side carBack logo1"></i>
+
+        <i class="fas fa-car-side carBack logo2"></i>
+
+        <i class="fas fa-car-side carBack logo3"></i>
+
+        <i class="fas fa-car-side carBack logo4"></i>
+
+        <footer>
+            <div class="text-center">&copy; Copyright <strong>Sno7y.</strong> 2019</div>
+            <div>
+                <ul class="text-center">
+
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Compensation</a></li>
+                    <li><a href="#">Disclosure</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Contact Us</a></li>
+
+
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "200px";
+            document.getElementById("main").style.marginLeft = "200px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+        $(function () {
+            "use strict";
+            $(window).on("scroll", function () {
+                var scrol = $(window).scrollTop();
+                if (scrol > 500) {
+                    $(".up").fadeIn();
+                }
+                else {
+                    $(".up").fadeOut();
+                }
+
+
+            });
+
+            $(".up").click(function () {
+                $("html , body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+
+        });
+
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+
+        $(function() {
+    $(".logo1").animate({left:"-50px"} , 1000);
+    });
+
+    $(function() {
+    $(".logo2").animate({left:"400px"} , 1000);
+    });
+
+    $(function() {
+    $(".logo3").animate({left:"800px"} , 1500);
+    });
+
+    $(function() {
+    $(".logo4").animate({left:"1200px"} , 1700);
+    });
+
+
+    </script>
+</body>
+</html>

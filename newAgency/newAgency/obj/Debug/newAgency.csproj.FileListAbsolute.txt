@@ -1,0 +1,2 @@
+E:\Projects\ITI projects\newAgency\newAgency\newAgency\obj\Debug\newAgency.csprojAssemblyReference.cache
+E:\Projects\ITI projects\newAgency\newAgency\newAgency\obj\Debug\newAgency.csproj.CoreCompileInputs.cache

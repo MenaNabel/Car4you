@@ -1,0 +1,259 @@
+﻿@model List<layOut20192.Models.car>
+@{
+    ViewBag.Title = "book";
+}
+
+<article class="divBook book2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <input type="text" class="search" id="myInput" onkeyup="myFunction()" placeholder=" Search for car">
+
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+<article id="myUL">
+    @{
+        foreach (var item in Model)
+        {
+            <article class="divBook book2" id="divBook">
+                <div class="container" id="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 ">
+                            <div class="border">
+                                <div class="text-center">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <h2>@item.type_car</h2>
+
+                                            <form method="post" action="/clint/okBook/@item.CID">
+                                                <input class="book" type="submit" value="Book Now">
+                                            </form>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4 col-sm-4 big">
+                                            <ul style="list-style:none">
+                                                <li><i class="fas fa-chair"></i> @item.num_seats Seat</li>
+                                                <li><i class="fas fa-id-card"></i>@item.num</li>
+                                                <li><i class="fas fa-hand-holding-usd"></i>@item.price $ per day</li>
+                                                @{
+                                                    if (item.air_conditioning == true)
+                                                    {
+                                                        <li><i class="fas fa-wind"></i> Air Conditioning</li>
+
+                                                    }
+
+                                                }
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 ">
+                                            <img src="~/Content/background-slide.jpg" width="100" height="100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+        }
+
+    }
+ <!--  <article class="divBook book2" id="divBook">
+        <div class="container" id="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 ">
+                    <div class="border">
+                        <div class="text-center">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <h2>KIA</h2>
+
+                                    <form method="post" action="/clint/okBook">
+                                        <input class="book" type="submit" value="Book Now">
+                                    </form>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-sm-4 big">
+                                    <ul style="list-style:none">
+                                        <li><i class="fas fa-chair"></i> 5 Seat</li>
+                                        <li><i class="fas fa-id-card"></i> 4f55f24</li>
+                                        <li><i class="fas fa-hand-holding-usd"></i> 500 $</li>
+                                        <li><i class="fas fa-wind"></i> Air Conditioning</li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 ">
+                                    <img src="~/Content/background-slide.jpg" width="100" height="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="divBook" id="divBook">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 ">
+                    <div class="border" style="border:1px solid black; padding:20px;padding-top:40px;">
+                        <div class="text-center">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <h2>PMW</h2>
+                                    <form method="post" action="/clint/okBook">
+                                        <input class="book" type="submit" value="Book Now">
+                                    </form>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-sm-4 big">
+                                    <ul style="list-style:none">
+                                        <li><i class="fas fa-chair"></i> 5 Seat</li>
+                                        <li><i class="fas fa-id-card"></i> 4f55f24</li>
+                                        <li><i class="fas fa-hand-holding-usd"></i> 500 $</li>
+                                        <li><i class="fas fa-wind"></i> Air Conditioning</li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <a href="/img"><img src="~/Content/bmw-m4-background-1.jpg" width="100" height="100"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="divBook" id="divBook">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 ">
+                    <div class="border" style="border:1px solid black; padding:20px;padding-top:40px;">
+                        <div class="text-center">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <h2>PMW</h2>
+                                    <form method="post" action="/clint/okBook">
+                                        <input class="book" type="submit" value="Book Now">
+                                    </form>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-sm-4 big">
+                                    <ul style="list-style:none">
+                                        <li><i class="fas fa-chair"></i> 5 Seat</li>
+                                        <li><i class="fas fa-id-card"></i> 4f55f24</li>
+                                        <li><i class="fas fa-hand-holding-usd"></i> 500 $</li>
+                                        <li><i class="fas fa-wind"></i> Air Conditioning</li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <img src="~/Content/modern-white-car_110488-1506.jpg" width="100" height="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="divBook" id="divBook">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 ">
+                    <div class="border" style="border:1px solid black; padding:20px;padding-top:40px;">
+                        <div class="text-center">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <h2>PMW</h2>
+                                    <form method="post" action="/clint/okBook">
+                                        <input class="book" type="submit" value="Book Now">
+                                    </form>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-sm-4 big">
+                                    <ul style="list-style:none">
+                                        <li><i class="fas fa-chair"></i> 5 Seat</li>
+                                        <li><i class="fas fa-id-card"></i> 4f55f24</li>
+                                        <li><i class="fas fa-hand-holding-usd"></i> 500 $</li>
+                                        <li><i class="fas fa-wind"></i> Air Conditioning</li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <img src="~/Content/modern-white-car_110488-1506.jpg" width="100" height="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </article>-->
+
+</article>
+
+@*<div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="btn-toolbar buttonGroup" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2 text-center " role="group" aria-label="First group">
+                        <button type="button" class="btn btn-secondary">1</button>
+                        <button type="button" class="btn btn-secondary">2</button>
+                        <button type="button" class="btn btn-secondary">3</button>
+                        <button type="button" class="btn btn-secondary">4</button>
+                        <button type="button" class="btn btn-secondary">5</button>
+                        <button type="button" class="btn btn-secondary">6</button>
+                        <button type="button" class="btn btn-secondary">7</button>
+                        <button type="button" class="btn btn-secondary">8</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+        </div>
+    </div>*@
+
+<div aria-label="Page navigation example" class="pageList">
+    <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+

@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Log In";
+    Layout = "~/Views/Shared/_LayoutRegister.cshtml";
+}
+<div class="back">
+    <section id="home" class="firstCamp">
+
+        <div class="intro">
+            <h1 class="intro-title mb-4">Welcome For You In Sno7y</h1>
+            <h1 class="typewrite" data-period="2000" data-type='[ "Renting Cars", "Wedding", "Travel", "Latest Models" ]'>
+                <span class="wrap"></span>
+
+            </h1>
+        </div>
+
+    </section>
+
+
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <form method="get" action="/home/checkUser">
+                        <div class="row">
+
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <input type="email" name="email" id="email" class=" text-center" placeholder="E-mail" required />
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <input type="password" name="password" id="pasword" class=" text-center" placeholder="password" required />
+                            </div>
+
+
+
+                            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <input class="submit  text-center" type="submit" value="LOG IN" />
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+
+
+
+
+
+
+                        </div>
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </article>
+    <p class="text-center">if you don't have account , please enter sin in to create Account</p>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4"></div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <form method="get" action="/clint/register">
+
+
+                        <input class="submit  text-center" type="submit" value="SIN IN" />
+
+
+
+                    </form>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4"></div>
+
+            </div>
+        </div>
+    </article>
+</div>

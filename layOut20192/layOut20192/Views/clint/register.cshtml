@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Registertion";
+    Layout = "~/Views/Shared/_LayoutRegister.cshtml";
+}
+
+
+<div class="back">
+
+    <!--<div class="menu">
+        <p>fef</p>
+        <hr>
+        <p>fvgfrgre</p>
+        <hr>
+    </div>-->
+
+    <section id="home" class="firstCamp">
+
+        <div class="intro">
+            <h1 class="intro-title mb-4">Welcome For You In Sno7y</h1>
+            <h1 class="typewrite" data-period="2000" data-type='[ "Renting Cars", "Wedding", "Travel", "Latest Models" ]'>
+                <span class="wrap"></span>
+
+            </h1>
+        </div>
+
+    </section>
+
+
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <form method="post" action="/clint/addClient">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <input type="text" name="name"  class=" text-center" placeholder="Full Name" required />
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <input type="number" name="age"  class=" text-center" placeholder="Age" required />
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <input type="text" name="phone"  class=" text-center" placeholder="Number Phone" required />
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <input type="text" name="ssna"  class=" text-center" placeholder="SSN" required />
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <input type="password" name="password"  class=" text-center" placeholder="Password" required />
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <input type="email" name="email" class=" text-center" placeholder="E-mail" required />
+                            </div>
+
+
+
+
+                            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <input class="submit  text-center" type="submit" value="SIN IN" />
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </article>
+</div>
+
+
+

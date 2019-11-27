@@ -1,0 +1,810 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="/Content/logojpg.jpg" type="image/png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        
+        nav {
+            opacity: 0.7;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 10000;
+            top: 57px;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 20px;
+            opacity: 0.8;
+        }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 16px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+            margin-top: 6px;
+        }
+
+        media screen and (max-height: 450px) {
+            .sidenav
+
+        {
+            padding-top: 15px;
+        }
+
+
+
+        .sidenav a {
+            font-size: 18px;
+        }
+
+        }
+
+        body {
+            background-size: cover;
+            color: white;
+        }
+
+        .back {
+            background: rgba(0,0,0,0.45);
+            background-size: cover;
+            height: 100%;
+            
+        }
+
+        nav {
+            background: black;
+            color: white;
+        }
+
+            nav:hover {
+                color: black;
+            }
+
+        article {
+            margin-top: 0px;
+            padding-bottom: 50px;
+        }
+
+        .up {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            background: black;
+            color: white;
+            padding: 20px;
+            font-size: 25px;
+            border-radius: 50%;
+            display: none;
+            z-index: 100;
+            cursor: pointer;
+        }
+
+        .menu hr {
+            background: gray;
+        }
+
+        footer {
+            background: black;
+            opacity: 0.7;
+            padding-top: 40px;
+            padding-bottom: 50px;
+            margin-top: 0px;
+            margin-bottom: -20px;
+        }
+
+            footer div {
+                opacity: 0.4;
+                transition: all 0.3s ease-in-out;
+            }
+
+            footer:hover div {
+                opacity: 1;
+            }
+
+            footer div ul li {
+                list-style: none;
+                display: inline-block;
+                margin-top: 20px;
+                margin-left: 10px;
+            }
+
+                footer div ul li a {
+                    color: white;
+                }
+
+                    footer div ul li a:hover {
+                        color: white;
+                    }
+
+        section .intro {
+            margin: auto;
+        }
+
+            section .intro h1 {
+                padding-top: 200px;
+                text-align: center;
+                color: white;
+            }
+
+        .intro .typewrite {
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+
+
+
+        article {
+            margin-top: -77px;
+            margin-bottom: 0px;
+        }
+
+
+
+        form {
+            margin-top: 80px;
+            margin: auto;
+            text-align: center;
+        }
+
+            form div {
+                margin-top: 20px;
+            }
+
+            form input  , .submit {
+                margin-top: 10px;
+                background: none;
+                color: white;
+                border: none;
+                border-bottom: 1px solid gray;
+                border-radius: 50px;
+                padding: 10px;
+                font-size: 18px;
+                margin: auto;
+                text-align: center;
+                width:50%;
+                
+            }
+            .submit {
+                margin-bottom:30px;
+                padding-left:30px;
+                padding-right:30px;
+            }
+            .submit:hover {
+                color:white;
+                text-decoration:none;
+            }
+
+            input:focus {
+                width: 280px;
+            }
+
+            form .submit , .submit{
+                background: linear-gradient(to right,#FF6600 0,#000000 100%);
+                border: none;
+            }
+
+                form .submit:hover , .submit:hover{
+                    background: linear-gradient(to right,#000000 0,#FF6600 100%);
+                }
+
+        .search {
+            width: 130px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+            background: none;
+            color: white;
+            border: none;
+            border-bottom: 1px solid gray;
+            border-radius: 50px;
+            padding: 10px;
+            font-size: 18px;
+            margin: auto;
+            text-align: center;
+            margin-top: -10px;
+            margin-right: 200px;
+        }
+
+
+            .search:focus {
+                width: 100%;
+            }
+
+        .searchButton {
+            margin-left: 20px;
+        }
+
+        .book, .package {
+            background: linear-gradient(to right,#FF6600 0,#000000 100%);
+            margin-top: 10px;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px;
+            font-size: 18px;
+            margin: auto;
+            text-align: center;
+            width: 100%;
+        }
+
+            .book:hover, .package:hover {
+                background: linear-gradient(to right,#000000 0,#FF6600 100%);
+            }
+
+        .divBook {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding: 20px;
+        }
+
+            .divBook .img80 {
+                margin-top: 80px;
+            }
+
+        .book {
+            margin-top: 20px;
+        }
+
+        .carousel {
+            margin-top: 0px;
+            margin-bottom:100px;
+        }
+
+        .choose1 {
+            transition: all 0.5s ease-in-out;
+            opacity: 0.5;
+        }
+
+            .choose1:hover {
+                opacity: 1;
+            }
+
+        .choose2 {
+            font-size: 20px;
+            color: white;
+        }
+
+            .choose2:hover {
+                text-decoration: none;
+                color: white;
+            }
+
+        .choose3 {
+            margin-bottom: 115px;
+        }
+
+
+        .buttonGroup {
+            margin: auto;
+            text-align: center;
+        }
+
+        .numberOfBage {
+            margin-left: 120px;
+        }
+
+        .bbbbb {
+            margin: auto;
+            text-align: center;
+        }
+
+        .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8 {
+            display: none;
+            margin-left: 45px;
+            color: #818181;
+        }
+
+            .p1:hover {
+                color: #f1f1f1;
+            }
+
+        .okBookS {
+            margin-top: 200px;
+        }
+
+        .divBook img {
+            transition: all 1s;
+            border-radius: 5px;
+        }
+
+        .divBook {
+            display: block;
+            overflow: hidden; /* دى عشان الصور متطلعشي من براا*/
+        }
+
+            .divBook:hover img {
+                transform: scale(1.3, 1.3);
+                transition: all 1.5s;
+                box-shadow: 0px 5px 5px black;
+            }
+
+        .big {
+            transition: all 1s;
+            padding: 10px;
+        }
+
+        .divBook:hover .big {
+            transform: scale(1.3, 1.3);
+            transition: all 1s ease-in;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                /* Position the tooltip */
+                position: absolute;
+                z-index: 1;
+                bottom: 100%;
+                left: 50%;
+                margin-left: -60px;
+            }
+
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+            }
+
+        .imgBig {
+            margin-top:-110px;
+            
+        }
+        
+
+        .really {
+            transform: rotate(720deg);
+            transition: all 0.3s ease-in-out;
+            margin: 150px;
+        }
+
+            .really .far {
+                font-size: 50px;
+                transform: rotate(720deg);
+            }
+
+            .really h1 {
+                transform: rotate(720deg);
+                font-size: 50px;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .really h3 {
+                
+                padding-bottom:90px;
+            }
+
+            .really h3 .fas {
+                color: white;
+                margin-left: 25px;
+                transition: all 0.3s ease-in-out;
+            }
+
+                .really h3 .fas:hover {
+                    color: white;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+                    transform: scale(1.2,1.2);
+                }
+
+                .search {
+  width: 150px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  margin:auto;
+  margin-bottom:50px;
+
+}
+
+/* When the input field gets focus, change its width to 100% */
+.search:focus {
+  width: 100%;
+}
+    .border {
+        border:1px solid black;
+        padding:20px;
+        padding-top:40px;
+        border-radius:200px 0 200px 0 ; 
+        box-shadow: 0px 5px 5px black;
+    }
+
+    .carBack{
+        position:fixed;
+        opacity:0.5;
+        z-index:-1;
+    }
+    .logo1 {
+        left:-100px;
+        top:200px;
+        font-size:200px;
+    }
+    .logo2 {
+        left:-400px;
+        top:400px;
+        font-size:400px;
+    }
+    .logo3 {
+        left:-800px;
+        top:60px;
+        font-size:250px;
+    }
+    .logo4 {
+        left:-1400px;
+        top:500px;
+        font-size:100px;
+    }
+    .out a{
+        color:gray;
+        text-decoration:none;
+        margin-left:90vw;
+        transition:all 0.3s ease-in-out;
+    }
+        .out a:hover {
+            color: white;
+        }
+        .pageList {
+            
+            padding-bottom:50px;
+        }
+        ol li {
+            margin-bottom:-10px;
+            
+        }
+        .blue:hover {
+            color:white;
+            text-decoration:none;
+        }
+        
+    </style>
+</head>
+<body style="background: url(/Content/car-travelling-by-sunny-road_1088-51.jpg) no-repeat  fixed; background-size: cover;">
+
+
+    <div class="back">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light ">
+            <a class="navbar-brand" href="/clint/Book" style="color:white">
+
+                Learn To Earn
+            </a>
+
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/clint/Book" style="color:gray; ">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/clint/package" style="color:gray; ">Reservation Package</a>
+                    </li>
+                    
+                    
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <a class="nav-link" href="/clint/logIn" style="color:gray">LOG OUT <i class="fas fa-sign-out-alt"></i></a>
+                </ul>
+
+
+            </div>
+
+            
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color:white">
+                <!-- دى لما الشاشه تصغر بتحظ كل البيانات والاختيارات جوه ال 3 شرط اللى هيظهروو لما الشاشه هتصغر--> <!--data-target="#navbarNavAltMarkup" دى هتلاقيها مستدعيه ف الديف الكبير باسم ال id عشان لما تصغير وتدوس عليه يلاقيى الحاجات اللى ف الديف -->
+                <span style="color:white" class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+
+        </nav>
+
+        
+
+
+              <!--  <nav class="navbar navbar-expand-lg fixed-top navbar-light ">
+      <a class="navbar-brand" href="#" style="color:white">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav> -->
+
+            
+        <!--<div class="menu">
+        <p>fef</p>
+        <hr>
+        <p>fvgfrgre</p>
+        <hr>
+    </div>-->
+        <div class="back">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#" class="a1">About</a>
+                <p class="p1"> PMW <i class="fas fa-chair"></i> 5 Seat </p>
+                <a href="#" class="a2">Services</a>
+                <p class="p2"> PMW <i class="fas fa-chair"></i> 5 Seat</p>
+                <a href="#" class="a3">Clients</a>
+                <p class="p3"> PMW <i class="fas fa-chair"></i> 5 Seat</p>
+                <a href="#" class="a4">Contact</a>
+                <p class="p4"> PMW <i class="fas fa-chair"></i> 5 Seat</p>
+                <a href="#" class="a5">Sno7y</a>
+                <p class="p5"> PMW <i class="fas fa-chair"></i> 5 Seat</p>
+                <a href="#" class="a6">Home</a>
+                <p class="p6"> PMW <i class="fas fa-chair"></i> 5 Seat</p>
+                <a href="#" class="a7">slid</a>
+                <p class="p7"> PMW <i class="fas fa-chair"></i> 5 Seat</p>
+                <a href="#" class="a8">team</a>
+                <p class="p8"> PMW <i class="fas fa-chair"></i> 5 Seat</p>
+                <form method="post" action="/clint/package">
+                    <input class="package" type="submit" value="Reservation package" />
+                </form>
+            </div>
+
+            <div id="main">
+
+                <span style="font-size:30px;cursor:pointer" onclick="openNav(); ">&#9776; </span>
+            </div>
+
+
+            <div class="up">up</div>
+
+
+
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+
+        
+
+        <i class="fas fa-car-side carBack logo1"></i>
+
+        <i class="fas fa-car-side carBack logo2"></i>
+
+        <i class="fas fa-car-side carBack logo3"></i>
+
+        <i class="fas fa-car-side carBack logo4"></i>
+
+        <footer>
+            <div class="text-center">&copy; Copyright <strong>Sno7y.</strong> 2019</div>
+            <div>
+                <ul class="text-center">
+
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Compensation</a></li>
+                    <li><a href="#">Disclosure</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Contact Us</a></li>
+
+
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "200px";
+            document.getElementById("main").style.marginLeft = "200px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+        $(function () {
+            "use strict";
+            $(window).on("scroll", function () {
+                var scrol = $(window).scrollTop();
+                if (scrol > 100) {
+                    $(".up").fadeIn();
+                }
+                else {
+                    $(".up").fadeOut();
+                }
+
+
+            });
+
+            $(".up").click(function () {
+                $("html , body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+
+        });
+
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+
+        $(".a1").click(function () {
+            $(".p1").slideToggle();
+        });
+        $(".a2").click(function () {
+            $(".p2").slideToggle();
+        });
+        $(".a3").click(function () {
+            $(".p3").slideToggle();
+        });
+        $(".a4").click(function () {
+            $(".p4").slideToggle();
+        });
+        $(".a5").click(function () {
+            $(".p5").slideToggle();
+        });
+        $(".a6").click(function () {
+            $(".p6").slideToggle();
+        });
+        $(".a7").click(function () {
+            $(".p7").slideToggle();
+        });
+        $(".a8").click(function () {
+            $(".p8").slideToggle();
+        });
+
+    $(function () {
+  $('[data-toggle="popover"]').popover()
+    })
+
+    $(function () {
+  $('.example-popover').popover({
+    container: 'body'
+  })
+    })
+
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementById('divBook');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementById("container")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+            }
+        /*/*****************************************/
+
+    $(function() {
+    $(".logo1").animate({left:"-50px"} , 1000);
+    });
+
+    $(function() {
+    $(".logo2").animate({left:"400px"} , 1000);
+    });
+
+    $(function() {
+    $(".logo3").animate({left:"800px"} , 1500);
+    });
+
+    $(function() {
+    $(".logo4").animate({left:"1200px"} , 1700);
+    });
+
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿@model List<layOut20192.Models.package>
+@{
+    ViewBag.Title = "package";
+}
+
+<div style="padding-bottom:0px;">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <!--id="carouselExampleControls" ده ال id اللى بينده على الصوره لما تقلب من السهم ولازم يبقى زى ال href -->
+        <ol class="carousel-indicators">
+            <li href="#carouselExampleControls" data-slide-to="0" class="active"></li>
+            <li href="#carouselExampleControls" data-slide-to="1"></li>
+            <li href="#carouselExampleControls" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/Content/bmw-m4-background-1.jpg" class="d-block w-100" alt="..." width=50% height="600">
+                <div class="carousel-caption">
+                    <!-- دى بيكتب جمله من تحت الصوره-->
+                    <h1>@Model.First().name</h1>
+                    <p class="lead">Use data attributes to easily control the position of the carousel. data-slide accepts the keywords prev or next, which alters the slide position relative to its current position. Alternatively, use data-slide-to to pass a raw slide index to the carousel data-slide-to="2", which shifts the slide position to a particular index beginning with 0</p>
+                    <a href="/clint/ReadMore" class="submit">Read More</a>
+                    <a href="/clint/reallyBookPackage" class="submit">Reservion</a>
+                </div>
+            </div>
+            @{
+                foreach (var item in Model)
+                {
+                    <div class="carousel-item">
+                        <img src="~/Content/bmw-m4-background-1.jpg" class="d-block w-100" alt="..." width=50% height="600">
+                        <div class="carousel-caption">
+                            <!-- دى بيكتب جمله من تحت الصوره-->
+                            <h1>@item.name </h1>
+                            <p class="lead">Use data attributes to easily control the position of the carousel. data-slide accepts the keywords prev or next, which alters the slide position relative to its current position. Alternatively, use data-slide-to to pass a raw slide index to the carousel data-slide-to="2", which shifts the slide position to a particular index beginning with 0</p>
+                            <a href="/clint/ReadMore" class="submit">Read More</a>
+                            <a href="/clint/reallyBookPackage" class="submit">Reservion</a>
+                        </div>
+                    </div>
+
+                }
+            }
+
+            <!--
+
+    <div class="carousel-item active">
+         <img src="~/Content/bmw-m4-background-1.jpg" class="d-block w-100" alt="..." width=50% height="600">
+         <div class="carousel-caption">
+             <!-- دى بيكتب جمله من تحت الصوره-->
+            <!--  <h1>this first </h1>
+            <p class="lead">Use data attributes to easily control the position of the carousel. data-slide accepts the keywords prev or next, which alters the slide position relative to its current position. Alternatively, use data-slide-to to pass a raw slide index to the carousel data-slide-to="2", which shifts the slide position to a particular index beginning with 0</p>
+            <a href="/clint/ReadMore" class="submit">Read More</a>
+            <a href="/clint/reallyBookPackage" class="submit">Reservion</a>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img src="~/Content/15822366253_cb52f1fa1f_b.jpg" class="d-block w-100" alt="..." width="1000" height="600">
+        <div class="carousel-caption">
+            <h1>this second </h1>
+            <p class="lead">Use data attributes to easily control the position of the carousel. data-slide accepts the keywords prev or next, which alters the slide position relative to its current position. Alternatively, use data-slide-to to pass a raw slide index to the carousel data-slide-to="2", which shifts the slide position to a particular index beginning with 0</p>
+            <a href="/clint/ReadMore" class="submit">Read More</a>
+            <a href="/clint/reallyBookPackage" class="submit">Reservion</a>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img src="~/Content/Mercedes-Benz-S-Class-gear-patrol-slide-1-1940x1300.jpg" class="d-block w-100" alt="..." width="1000" height="600">
+        <div class="carousel-caption">
+            <h1>this third </h1>
+            <p class="lead">Use data attributes to easily control the position of the carousel. data-slide accepts the keywords prev or next, which alters the slide position relative to its current position. Alternatively, use data-slide-to to pass a raw slide index to the carousel data-slide-to="2", which shifts the slide position to a particular index beginning with 0</p>
+            <a href="/clint/ReadMore" class="submit">Read More</a>
+            <a href="/clint/reallyBookPackage" class="submit">Reservion</a>
+        </div>
+    </div>-->
+        </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" title="Back">
+
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" title="Next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+       
+        
+
+
+
+

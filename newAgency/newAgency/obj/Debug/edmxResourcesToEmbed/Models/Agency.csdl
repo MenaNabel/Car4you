@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Sno7yModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="car">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="type_car" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="num_seats" Type="Int32" Nullable="false" />
+    <Property Name="col" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pick" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="available" Type="Boolean" Nullable="false" />
+    <Property Name="air_conditioning" Type="Boolean" />
+    <NavigationProperty Name="reservation_car" Relationship="Self.FK__reservati__car_I__778AC167" FromRole="car" ToRole="reservation_car" />
+    <NavigationProperty Name="packages" Relationship="Self.package_car" FromRole="car" ToRole="package" />
+  </EntityType>
+  <EntityType Name="client">
+    <Key>
+      <PropertyRef Name="ssna" />
+    </Key>
+    <Property Name="ssna" Type="String" MaxLength="14" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="t_ID" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="balance" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="number_of_reservation" Type="Int32" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="type_client" Relationship="Self.FK__client__t_ID__6477ECF3" FromRole="client" ToRole="type_client" />
+    <NavigationProperty Name="reservation_car" Relationship="Self.FK__reservati__clien__7D439ABD" FromRole="client" ToRole="reservation_car" />
+  </EntityType>
+  <EntityType Name="package">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="start_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="end_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="available" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="reservation_car" Relationship="Self.FK__reservati__packa__01142BA1" FromRole="package" ToRole="reservation_car" />
+    <NavigationProperty Name="cars" Relationship="Self.package_car" FromRole="package" ToRole="car" />
+  </EntityType>
+  <EntityType Name="reservation_car">
+    <Key>
+      <PropertyRef Name="number" />
+    </Key>
+    <Property Name="car_ID" Type="Int32" Nullable="false" />
+    <Property Name="start_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="end_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="client_ID" Type="String" MaxLength="14" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="type_reservation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="package" Type="Boolean" />
+    <Property Name="duration" Type="Int32" />
+    <Property Name="price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="package_ID" Type="Int32" />
+    <NavigationProperty Name="car" Relationship="Self.FK__reservati__car_I__778AC167" FromRole="reservation_car" ToRole="car" />
+    <NavigationProperty Name="client" Relationship="Self.FK__reservati__clien__7D439ABD" FromRole="reservation_car" ToRole="client" />
+    <NavigationProperty Name="package1" Relationship="Self.FK__reservati__packa__01142BA1" FromRole="reservation_car" ToRole="package" />
+  </EntityType>
+  <EntityType Name="setting_agency">
+    <Key>
+      <PropertyRef Name="ssna" />
+    </Key>
+    <Property Name="ssna" Type="String" MaxLength="14" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="admin_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="type_client">
+    <Key>
+      <PropertyRef Name="type_ID" />
+    </Key>
+    <Property Name="type_ID" Type="Int32" Nullable="false" />
+    <Property Name="type_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="clients" Relationship="Self.FK__client__t_ID__6477ECF3" FromRole="type_client" ToRole="client" />
+  </EntityType>
+  <Association Name="FK__reservati__car_I__778AC167">
+    <End Role="car" Type="Self.car" Multiplicity="1" />
+    <End Role="reservation_car" Type="Self.reservation_car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="car">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="reservation_car">
+        <PropertyRef Name="car_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__client__t_ID__6477ECF3">
+    <End Role="type_client" Type="Self.type_client" Multiplicity="1" />
+    <End Role="client" Type="Self.client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="type_client">
+        <PropertyRef Name="type_ID" />
+      </Principal>
+      <Dependent Role="client">
+        <PropertyRef Name="t_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__reservati__clien__7D439ABD">
+    <End Role="client" Type="Self.client" Multiplicity="1" />
+    <End Role="reservation_car" Type="Self.reservation_car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="ssna" />
+      </Principal>
+      <Dependent Role="reservation_car">
+        <PropertyRef Name="client_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__reservati__packa__01142BA1">
+    <End Role="package" Type="Self.package" Multiplicity="0..1" />
+    <End Role="reservation_car" Type="Self.reservation_car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="package">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="reservation_car">
+        <PropertyRef Name="package_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="package_car">
+    <End Role="car" Type="Self.car" Multiplicity="*" />
+    <End Role="package" Type="Self.package" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="Sno7yEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cars" EntityType="Self.car" />
+    <EntitySet Name="clients" EntityType="Self.client" />
+    <EntitySet Name="packages" EntityType="Self.package" />
+    <EntitySet Name="reservation_car" EntityType="Self.reservation_car" />
+    <EntitySet Name="setting_agency" EntityType="Self.setting_agency" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="type_client" EntityType="Self.type_client" />
+    <AssociationSet Name="FK__reservati__car_I__778AC167" Association="Self.FK__reservati__car_I__778AC167">
+      <End Role="car" EntitySet="cars" />
+      <End Role="reservation_car" EntitySet="reservation_car" />
+    </AssociationSet>
+    <AssociationSet Name="FK__client__t_ID__6477ECF3" Association="Self.FK__client__t_ID__6477ECF3">
+      <End Role="type_client" EntitySet="type_client" />
+      <End Role="client" EntitySet="clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__reservati__clien__7D439ABD" Association="Self.FK__reservati__clien__7D439ABD">
+      <End Role="client" EntitySet="clients" />
+      <End Role="reservation_car" EntitySet="reservation_car" />
+    </AssociationSet>
+    <AssociationSet Name="FK__reservati__packa__01142BA1" Association="Self.FK__reservati__packa__01142BA1">
+      <End Role="package" EntitySet="packages" />
+      <End Role="reservation_car" EntitySet="reservation_car" />
+    </AssociationSet>
+    <AssociationSet Name="package_car" Association="Self.package_car">
+      <End Role="car" EntitySet="cars" />
+      <End Role="package" EntitySet="packages" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,116 @@
+﻿@model List<layOut20192.Models.car>
+@{
+    ViewBag.Title = "cars";
+    Layout = "~/Views/Shared/_LayoutRegister.cshtml";
+}
+
+<div class="back">
+    <article class="divBook">
+        <form class="formTo">
+            <label> From </label>  <input type="date" />
+            <label> To </label>  <input type="date" />
+            <input type="submit" value="Search" class="submit" />
+        </form>
+        <table class="table table-hover">
+            <thead>
+                <tr class="text-center">
+                    <th scope="col">#</th>
+                    <th scope="col">Car Model</th>
+                    <th scope="col">car number</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Number Of Seats</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">air_conditioning</th>
+                    <th scope="col">Number Of reservation Car</th>
+                    <th scope="col">package</th>
+                    <th scope="col">individually</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 1;
+                    foreach (var item in Model)
+                    {
+                                <tr class="text-center">
+                                    <th scope="row">@i</th>
+                                    <td>@item.type_car</td>
+                                    <td>@item.num</td>
+                                    <td>@item.col</td>
+                                    <td>@item.num_seats</td>
+                                    <td>@item.price</td>
+                                    @{
+                                        if (item.air_conditioning == true)
+                                        {
+                                            <td><i class="fas fa-check"></i></td>
+
+                                        }
+                                    }
+                                    <td>@item.Number_Of_reservation</td>
+                                    <td>@item.package</td>
+                                    <td>@item.individually</td>
+                                    @{
+                                        i++;
+                                    }
+                                </tr>
+                    }
+                }
+
+                <!--
+              <tr class="text-center">
+                <th scope="row">2</th>
+                <td>Nassan</td>
+                <td>82545</td>
+                <td>Red</td>
+                <td>6</td>
+                <td>5</td>
+                <td>585</td>
+                <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr class="text-center">
+                <th scope="row">3</th>
+                <td>BMW</td>
+                <td>6450</td>
+                <td>White</td>
+                <td>2</td>
+                <td>5</td>
+                <td>640</td>
+                <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr class="text-center">
+                <th scope="row">4</th>
+                <td>Lada</td>
+                <td>6420</td>
+                <td>Gray</td>
+                <td>4</td>
+                <td>3</td>
+                <td>20</td>
+                <td><i class="fas fa-times"></i></td>
+            </tr>
+            <tr class="text-center">
+                <th scope="row">5</th>
+                <td>KIA</td>
+                <td>5454</td>
+                <td>Blue</td>
+                <td>4</td>
+                <td>4</td>
+                <td>500</td>
+                <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr class="text-center">
+                <th scope="row">6</th>
+                <td>Lamozen</td>
+                <td>6532</td>
+                <td>Golden</td>
+                <td>10</td>
+                <td>2</td>
+                <td>2000</td>
+                <td><i class="fas fa-check"></i></td>
+            </tr>
+            -->
+            </tbody>
+        </table>
+
+    </article>
+</div>
+
+

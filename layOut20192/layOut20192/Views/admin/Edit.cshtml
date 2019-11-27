@@ -1,0 +1,16 @@
+﻿@model layOut20192.Models.car
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutAnimate.cshtml";
+}
+<h2>Edit</h2>
+<h1>@Model.type_car</h1>
+<form method="post" action="/admin/SEdit/@Model.CID">
+    <input type="number" name="price" class="form-control" placeholder="@Model.price" />
+    <input type="text" name="col" class="form-control" placeholder="@Model.col" />
+    <input type="text" name="pick" class="form-control" placeholder="@Model.pick" />
+    <input type="checkbox" name="available" value="true"> available<br>
+    <input type="checkbox" name="air_conditioning" value="true"> air_conditioning<br>
+    <input type="submit" value="Edit" />
+</form>
+<a href="~/home/Index">Home</a>

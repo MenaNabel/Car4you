@@ -1,0 +1,164 @@
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\layOut20192.dll.config
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\layOut20192.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\layOut20192.pdb
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\csc.exe
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\csc.exe.config
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\csc.rsp
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\csi.exe
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\csi.exe.config
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\csi.rsp
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.AppContext.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Console.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.IO.Compression.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.IO.Pipes.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Security.Claims.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.ValueTuple.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Xml.XPath.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\vbc.exe
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\vbc.exe.config
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\vbc.rsp
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\VBCSCompiler.exe
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\Antlr3.Runtime.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\Newtonsoft.Json.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.Helpers.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.Mvc.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.Optimization.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.Razor.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.WebPages.Deployment.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.WebPages.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.WebPages.Razor.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\WebGrease.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.Helpers.xml
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.Mvc.xml
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.Optimization.xml
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.Razor.xml
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.WebPages.xml
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.WebPages.Deployment.xml
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\System.Web.WebPages.Razor.xml
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\Newtonsoft.Json.xml
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\Antlr3.Runtime.pdb
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\dell\source\repos\layOut20192\layOut20192\obj\Debug\layOut20192.csprojAssemblyReference.cache
+C:\Users\dell\source\repos\layOut20192\layOut20192\obj\Debug\layOut20192.csproj.CoreCompileInputs.cache
+C:\Users\dell\source\repos\layOut20192\layOut20192\obj\Debug\layOut20192.csproj.CopyComplete
+C:\Users\dell\source\repos\layOut20192\layOut20192\obj\Debug\layOut20192.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\obj\Debug\layOut20192.pdb
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\PagedList.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\PagedList.Mvc.dll
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\PagedList.xml
+C:\Users\dell\source\repos\layOut20192\layOut20192\bin\PagedList.Mvc.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\layOut20192.dll.config
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\layOut20192.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\layOut20192.pdb
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\csc.exe
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\csc.exe.config
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\csc.rsp
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\csi.exe
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\csi.exe.config
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\csi.rsp
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.AppContext.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Collections.Immutable.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Console.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.IO.Compression.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.IO.FileSystem.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.IO.Pipes.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Reflection.Metadata.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Security.AccessControl.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Security.Claims.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Security.Principal.Windows.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.ValueTuple.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Xml.XPath.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\vbc.exe
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\vbc.exe.config
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\vbc.rsp
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\VBCSCompiler.exe
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\roslyn\VBCSCompiler.exe.config
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\Antlr3.Runtime.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\Newtonsoft.Json.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\PagedList.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\PagedList.Mvc.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.Helpers.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.Mvc.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.Optimization.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.Razor.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.WebPages.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.WebPages.Razor.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\WebGrease.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\PagedList.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\PagedList.Mvc.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.Helpers.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.Mvc.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.Optimization.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.Razor.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.WebPages.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\System.Web.WebPages.Razor.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\Newtonsoft.Json.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\Antlr3.Runtime.pdb
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\obj\Debug\layOut20192.csprojAssemblyReference.cache
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\obj\Debug\layOut20192.csproj.CoreCompileInputs.cache
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\obj\Debug\layOut20192.csproj.CopyComplete
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\obj\Debug\layOut20192.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\obj\Debug\layOut20192.pdb
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\EntityFramework.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\EntityFramework.SqlServer.dll
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\EntityFramework.xml
+E:\Projects\ITI projects\newAgency\layOut20192\layOut20192\bin\EntityFramework.SqlServer.xml

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Sno7yModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="car">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="num" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="type_car" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="num_seats" Type="int" Nullable="false" />
+    <Property Name="col" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="pick" Type="nvarchar(max)" />
+    <Property Name="available" Type="bit" Nullable="false" />
+    <Property Name="air_conditioning" Type="bit" />
+  </EntityType>
+  <EntityType Name="client">
+    <Key>
+      <PropertyRef Name="ssna" />
+    </Key>
+    <Property Name="ssna" Type="nvarchar" MaxLength="14" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="t_ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="balance" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="number_of_reservation" Type="int" />
+    <Property Name="age" Type="int" />
+    <Property Name="phone" Type="nvarchar" MaxLength="11" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="password" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="package">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="start_date" Type="date" Nullable="false" />
+    <Property Name="end_date" Type="date" Nullable="false" />
+    <Property Name="available" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="package_car">
+    <Key>
+      <PropertyRef Name="car_ID" />
+      <PropertyRef Name="package_ID" />
+    </Key>
+    <Property Name="car_ID" Type="int" Nullable="false" />
+    <Property Name="package_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reservation_car">
+    <Key>
+      <PropertyRef Name="number" />
+    </Key>
+    <Property Name="car_ID" Type="int" Nullable="false" />
+    <Property Name="start_Date" Type="datetime" Nullable="false" />
+    <Property Name="end_date" Type="datetime" Nullable="false" />
+    <Property Name="number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="client_ID" Type="nvarchar" MaxLength="14" Nullable="false" />
+    <Property Name="type_reservation" Type="nvarchar" MaxLength="255" />
+    <Property Name="package" Type="bit" />
+    <Property Name="duration" Type="int" />
+    <Property Name="price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="package_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="setting_agency">
+    <Key>
+      <PropertyRef Name="ssna" />
+    </Key>
+    <Property Name="ssna" Type="nvarchar" MaxLength="14" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="admin_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="250" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="type_client">
+    <Key>
+      <PropertyRef Name="type_ID" />
+    </Key>
+    <Property Name="type_ID" Type="int" Nullable="false" />
+    <Property Name="type_name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK__client__t_ID__6477ECF3">
+    <End Role="type_client" Type="Self.type_client" Multiplicity="1" />
+    <End Role="client" Type="Self.client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="type_client">
+        <PropertyRef Name="type_ID" />
+      </Principal>
+      <Dependent Role="client">
+        <PropertyRef Name="t_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__package_c__car_I__74AE54BC">
+    <End Role="car" Type="Self.car" Multiplicity="1" />
+    <End Role="package_car" Type="Self.package_car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="car">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="package_car">
+        <PropertyRef Name="car_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__package_c__packa__75A278F5">
+    <End Role="package" Type="Self.package" Multiplicity="1" />
+    <End Role="package_car" Type="Self.package_car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="package">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="package_car">
+        <PropertyRef Name="package_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__reservati__car_I__778AC167">
+    <End Role="car" Type="Self.car" Multiplicity="1" />
+    <End Role="reservation_car" Type="Self.reservation_car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="car">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="reservation_car">
+        <PropertyRef Name="car_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__reservati__clien__7D439ABD">
+    <End Role="client" Type="Self.client" Multiplicity="1" />
+    <End Role="reservation_car" Type="Self.reservation_car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="ssna" />
+      </Principal>
+      <Dependent Role="reservation_car">
+        <PropertyRef Name="client_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__reservati__packa__01142BA1">
+    <End Role="package" Type="Self.package" Multiplicity="0..1" />
+    <End Role="reservation_car" Type="Self.reservation_car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="package">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="reservation_car">
+        <PropertyRef Name="package_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Sno7yModelStoreContainer">
+    <EntitySet Name="car" EntityType="Self.car" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client" EntityType="Self.client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="package" EntityType="Self.package" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="package_car" EntityType="Self.package_car" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reservation_car" EntityType="Self.reservation_car" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="setting_agency" EntityType="Self.setting_agency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="type_client" EntityType="Self.type_client" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__client__t_ID__6477ECF3" Association="Self.FK__client__t_ID__6477ECF3">
+      <End Role="type_client" EntitySet="type_client" />
+      <End Role="client" EntitySet="client" />
+    </AssociationSet>
+    <AssociationSet Name="FK__package_c__car_I__74AE54BC" Association="Self.FK__package_c__car_I__74AE54BC">
+      <End Role="car" EntitySet="car" />
+      <End Role="package_car" EntitySet="package_car" />
+    </AssociationSet>
+    <AssociationSet Name="FK__package_c__packa__75A278F5" Association="Self.FK__package_c__packa__75A278F5">
+      <End Role="package" EntitySet="package" />
+      <End Role="package_car" EntitySet="package_car" />
+    </AssociationSet>
+    <AssociationSet Name="FK__reservati__car_I__778AC167" Association="Self.FK__reservati__car_I__778AC167">
+      <End Role="car" EntitySet="car" />
+      <End Role="reservation_car" EntitySet="reservation_car" />
+    </AssociationSet>
+    <AssociationSet Name="FK__reservati__clien__7D439ABD" Association="Self.FK__reservati__clien__7D439ABD">
+      <End Role="client" EntitySet="client" />
+      <End Role="reservation_car" EntitySet="reservation_car" />
+    </AssociationSet>
+    <AssociationSet Name="FK__reservati__packa__01142BA1" Association="Self.FK__reservati__packa__01142BA1">
+      <End Role="package" EntitySet="package" />
+      <End Role="reservation_car" EntitySet="reservation_car" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

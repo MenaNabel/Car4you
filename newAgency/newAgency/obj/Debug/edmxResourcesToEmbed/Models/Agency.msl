@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Sno7yModelStoreContainer" CdmEntityContainer="Sno7yEntities">
+    <EntitySetMapping Name="cars">
+      <EntityTypeMapping TypeName="Sno7yModel.car">
+        <MappingFragment StoreEntitySet="car">
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="type_car" ColumnName="type_car" />
+          <ScalarProperty Name="num_seats" ColumnName="num_seats" />
+          <ScalarProperty Name="col" ColumnName="col" />
+          <ScalarProperty Name="pick" ColumnName="pick" />
+          <ScalarProperty Name="available" ColumnName="available" />
+          <ScalarProperty Name="air_conditioning" ColumnName="air_conditioning" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="Sno7yModel.client">
+        <MappingFragment StoreEntitySet="client">
+          <ScalarProperty Name="ssna" ColumnName="ssna" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="t_ID" ColumnName="t_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="number_of_reservation" ColumnName="number_of_reservation" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="packages">
+      <EntityTypeMapping TypeName="Sno7yModel.package">
+        <MappingFragment StoreEntitySet="package">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="available" ColumnName="available" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reservation_car">
+      <EntityTypeMapping TypeName="Sno7yModel.reservation_car">
+        <MappingFragment StoreEntitySet="reservation_car">
+          <ScalarProperty Name="car_ID" ColumnName="car_ID" />
+          <ScalarProperty Name="start_Date" ColumnName="start_Date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="client_ID" ColumnName="client_ID" />
+          <ScalarProperty Name="type_reservation" ColumnName="type_reservation" />
+          <ScalarProperty Name="package" ColumnName="package" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="package_ID" ColumnName="package_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="setting_agency">
+      <EntityTypeMapping TypeName="Sno7yModel.setting_agency">
+        <MappingFragment StoreEntitySet="setting_agency">
+          <ScalarProperty Name="ssna" ColumnName="ssna" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="admin_Name" ColumnName="admin_Name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Sno7yModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="type_client">
+      <EntityTypeMapping TypeName="Sno7yModel.type_client">
+        <MappingFragment StoreEntitySet="type_client">
+          <ScalarProperty Name="type_ID" ColumnName="type_ID" />
+          <ScalarProperty Name="type_name" ColumnName="type_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="package_car" TypeName="Sno7yModel.package_car" StoreEntitySet="package_car">
+      <EndProperty Name="car">
+        <ScalarProperty Name="CID" ColumnName="car_ID" />
+      </EndProperty>
+      <EndProperty Name="package">
+        <ScalarProperty Name="ID" ColumnName="package_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
